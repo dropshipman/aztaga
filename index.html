@@ -82,7 +82,7 @@
                     </p>
                     <div class="flex flex-col items-center space-y-4 mb-6">
                         <div class="bg-gradient-to-r from-yellow-100 to-orange-100 p-4 rounded-xl border-2 border-yellow-300 max-w-xs w-full text-center">
-                            <p class="font-bold text-lg text-gray-800 break-all">terimajalah@gmail.com</p>
+                            <p class="font-bold text-lg text-gray-800 break-all">wahyuddinkubee@gmail.com</p>
                         </div>
                     </div>
                     <p class="text-gray-600 text-center mb-8 text-lg">
@@ -98,6 +98,61 @@
                             </svg>
                             <span>Cek Inbox Gmail</span>
                         </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Email Generator -->
+            <div class="bg-white rounded-3xl shadow-xl border border-green-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-green-500 to-emerald-500 p-6">
+                    <h2 class="text-2xl font-bold text-white text-center flex items-center justify-center">
+                        <svg class="h-8 w-8 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        Pembuat Alamat Email Kustom & Dot
+                    </h2>
+                </div>
+                <div class="p-8">
+                    <p class="text-gray-600 text-center mb-8 text-lg">
+                        Hasilkan nama pengguna secara acak dan buat variasi alamat email Anda dengan domain kustom pilihan Anda.
+                    </p>
+                    <div class="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4 mb-8">
+                        <button
+                            id="randomUsernameBtn"
+                            class="bg-gradient-to-r from-gray-400 to-gray-500 hover:from-gray-500 hover:to-gray-600 text-white font-semibold py-4 px-6 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 w-full lg:w-auto flex items-center justify-center space-x-2"
+                        >
+                            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                            </svg>
+                            <span>Acak</span>
+                        </button>
+                        <div id="customUsernameDisplay" class="flex-1 p-4 border-2 border-gray-200 rounded-xl bg-gray-50 text-gray-700 w-full text-center font-mono text-lg font-medium break-all">
+                            <!-- Random username will be displayed here -->
+                        </div>
+                        <span class="text-xl font-medium text-gray-600 bg-gray-100 px-4 py-2 rounded-lg">@</span>
+                        <select
+                            id="customDomainDropdown"
+                            class="flex-1 p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent shadow-sm text-gray-700 w-full bg-white hover:border-green-300 transition-colors duration-200"
+                        >
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                        <button
+                            id="generateCustomBtn"
+                            class="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-semibold py-4 px-8 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 w-full lg:w-auto flex items-center justify-center space-x-2"
+                        >
+                            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                            <span>Hasilkan Alamat</span>
+                        </button>
+                    </div>                 
+                    <div id="customResults" class="bg-gray-50 p-6 rounded-2xl border border-gray-200 min-h-[200px] custom-scrollbar max-h-80 overflow-y-auto">
+                        <div class="flex flex-col items-center justify-center py-12">
+                            <svg class="h-12 w-12 text-gray-300 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 4.44 7.89-4.44M21 8v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8m18 0l-9 5-9-5"/>
+                            </svg>
+                            <p class="text-gray-500 text-center">Hasil akan muncul di sini</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -147,61 +202,7 @@
                     </p>
                 </div>
             </div>
-
-            <!-- Custom Email Generator -->
-            <div class="bg-white rounded-3xl shadow-xl border border-green-200 overflow-hidden">
-                <div class="bg-gradient-to-r from-green-500 to-emerald-500 p-6">
-                    <h2 class="text-2xl font-bold text-white text-center flex items-center justify-center">
-                        <svg class="h-8 w-8 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        Pembuat Alamat Email Kustom & Dot
-                    </h2>
-                </div>
-                <div class="p-8">
-                    <p class="text-gray-600 text-center mb-8 text-lg">
-                        Hasilkan nama pengguna secara acak dan buat variasi alamat email Anda dengan domain kustom pilihan Anda.
-                    </p>
-                    <div class="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4 mb-8">
-                        <button
-                            id="randomUsernameBtn"
-                            class="bg-gradient-to-r from-gray-400 to-gray-500 hover:from-gray-500 hover:to-gray-600 text-white font-semibold py-4 px-6 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 w-full lg:w-auto flex items-center justify-center space-x-2"
-                        >
-                            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
-                            </svg>
-                            <span>Acak</span>
-                        </button>
-                        <div id="customUsernameDisplay" class="flex-1 p-4 border-2 border-gray-200 rounded-xl bg-gray-50 text-gray-700 w-full text-center font-mono text-lg font-medium break-all">
-                            <!-- Random username will be displayed here -->
-                        </div>
-                        <span class="text-xl font-medium text-gray-600 bg-gray-100 px-4 py-2 rounded-lg">@</span>
-                        <select
-                            id="customDomainDropdown"
-                            class="flex-1 p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent shadow-sm text-gray-700 w-full bg-white hover:border-green-300 transition-colors duration-200"
-                        >
-                            <!-- Options will be populated by JavaScript -->
-                        </select>
-                        <button
-                            id="generateCustomBtn"
-                            class="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-semibold py-4 px-8 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 w-full lg:w-auto flex items-center justify-center space-x-2"
-                        >
-                            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                            </svg>
-                            <span>Hasilkan Alamat</span>
-                        </button>
-                    </div>
-                    <div id="customResults" class="bg-gray-50 p-6 rounded-2xl border border-gray-200 min-h-[200px] custom-scrollbar max-h-80 overflow-y-auto">
-                        <div class="flex flex-col items-center justify-center py-12">
-                            <svg class="h-12 w-12 text-gray-300 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 4.44 7.89-4.44M21 8v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8m18 0l-9 5-9-5"/>
-                            </svg>
-                            <p class="text-gray-500 text-center">Hasil akan muncul di sini</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
 
@@ -270,7 +271,7 @@
                 <!-- Copyright -->
                 <div class="border-t border-gray-700 pt-6">
                     <p class="text-gray-400 text-sm">
-                        © 2025 FongStudio. All rights reserved.
+                        © 2024 FongStudio. All rights reserved.
                     </p>
                 </div>
             </div>
@@ -297,13 +298,14 @@
     <script>
         // Data for dropdowns
         const gmailUsernames = [
-            "tortusiji", "lorotortu", "telutortu"
+            "aztaga"
         ];
 
         const customDomains = [
-            "chatjilacap.biz.id"
+            "aztaga.shop", "aztaga.shop", "aztaga.shop", "aztaga.shop", "aztaga.shop", "aztaga.shop", "aztaga.shop", "aztaga.shop", "aztaga.shop", "aztaga.shop"
         ];
 
+      
         // Generate random string for username
         function generateRandomString(length) {
             const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
@@ -328,9 +330,9 @@
                 generateDotCombinations(prefix + suffix[0], suffix.substring(1));
 
                 if (prefix.length > 0) {
-                    generateDotCombinations(prefix + '.' + suffix[0], suffix.substring(1));
-                }
-            }
+                    generateDotCombinations(prefix + suffix[0], suffix.substring(1));
+               }
+             }
 
             if (cleanUsername.length > 0) {
                 generateDotCombinations(cleanUsername[0], cleanUsername.substring(1));
@@ -409,7 +411,7 @@
             populateDropdown('gmailDropdown', gmailUsernames);
             populateDropdown('customDomainDropdown', customDomains);
             document.getElementById('customUsernameDisplay').textContent = generateRandomString(10);
-
+            
             // Event listeners
             document.getElementById('checkInboxBtn').addEventListener('click', function() {
                 window.open('https://mail.google.com/mail/u/0/#inbox', '_blank');
